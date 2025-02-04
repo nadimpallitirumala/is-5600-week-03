@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-  <title>Chat App</title>
-  <link rel="stylesheet" href="/tachyons.min.css">
-  <link rel="stylesheet" href="/chat.css">
-  <body>
-    <div id="messages">
-      <h4>Chat Messages</h4>
-    </div>
+<html>
+<head>
+    <title>Chat App</title>
+    <style>
+        #messages {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        #input {
+            width: 80%;
+            padding: 5px;
+        }
+        button {
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="messages"></div>
     <form id="form">
-      <input
-      id="input"
-      type="text"
-      placeholder="Your message...">
-      </form>
-    <script src='/chat.js'></script>
-  </body>
+        <input id="input" type="text" placeholder="Type a message...">
+        <button type="submit">Send</button>
+    </form>
+    <script src="/chat.js"></script>
+</body>
 </html>
